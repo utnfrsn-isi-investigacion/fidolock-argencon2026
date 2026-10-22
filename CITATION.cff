@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the paper below."
+title: "FidoLock: ARGENCON 2026 artifact"
+type: software
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/utnfrsn-isi-investigacion/fidolock-argencon2026"
+abstract: >-
+  Firmware, host tools, hardware schematic and latency dataset for FidoLock,
+  an ESP32 door controller that acts as a self-contained FIDO2 relying party
+  for hardware security keys over NFC (CTAP2).
+keywords:
+  - FIDO2
+  - CTAP2
+  - physical access control
+  - ESP32
+  - NFC
+  - hardware security keys
+authors:
+  - family-names: Recalde
+    given-names: Alejandro
+    affiliation: "Universidad Tecnológica Nacional, Facultad Regional San Nicolás"
+  - family-names: Torcello
+    given-names: Leandro
+    affiliation: "Universidad Tecnológica Nacional, Facultad Regional San Nicolás"
+  - family-names: Paez
+    given-names: Enzo
+    affiliation: "Universidad Tecnológica Nacional, Facultad Regional San Nicolás"
+  - family-names: Arce
+    given-names: Débora P.
+    affiliation: "Universidad Tecnológica Nacional, Facultad Regional San Nicolás"
+preferred-citation:
+  type: conference-paper
+  title: "FidoLock: FIDO2/CTAP2-Based Physical Access Control with Hardware Security Keys on an Embedded Platform"
+  authors:
+    - family-names: Recalde
+      given-names: Alejandro
+    - family-names: Torcello
+      given-names: Leandro
+    - family-names: Paez
+      given-names: Enzo
+    - family-names: Arce
+      given-names: Débora P.
+  collection-title: "2026 IEEE Biennial Congress of Argentina (ARGENCON)"
+  year: 2026

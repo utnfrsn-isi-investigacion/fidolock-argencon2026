@@ -1,0 +1,50 @@
+# FidoLock authentication latency measurements
+# Device: ESP32-WROOM-32 DevKit V1, PN532 (SPI), Yubico Security Key NFC
+# Conditions: single enrolled credential, cold tap (key fully removed between taps), N=40
+# Phases:
+#   detection_ms  - NFC card detection (detectCard call returns)
+#   challenge_ms  - CTAP2 GetAssertion NFC round-trip (includes listAll + generateChallenge + getAssertion)
+#   auth_ms       - Local verification (ECDSA-P256 via mbedTLS + LittleFS counter write)
+#   total_ms      - End-to-end (detection start → counter write complete)
+# Note: run 12 (challenge=1938ms) is a suspected ISO 14443-4 frame retransmission outlier.
+run,detection_ms,challenge_ms,auth_ms,total_ms
+1,61,1118,503,1682
+2,65,879,511,1455
+3,72,1157,519,1748
+4,77,1063,561,1701
+5,55,1214,498,1767
+6,60,1184,503,1747
+7,72,1191,519,1782
+8,80,1174,567,1821
+9,52,1146,493,1691
+10,60,1172,501,1733
+11,65,1231,509,1805
+12,72,1938,519,2529
+13,77,1151,561,1789
+14,55,1115,496,1666
+15,60,1216,503,1779
+16,68,1035,513,1616
+17,72,1147,519,1738
+18,80,1185,568,1833
+19,52,1201,493,1746
+20,60,1194,501,1755
+21,65,1220,509,1794
+22,72,1190,518,1780
+23,77,1327,561,1965
+24,55,1181,496,1732
+25,60,1205,503,1768
+26,68,1211,513,1792
+27,72,1081,520,1673
+28,80,1361,567,2008
+29,52,1234,493,1779
+30,60,1227,502,1789
+31,65,1198,509,1772
+32,72,1432,518,2022
+33,77,1107,562,1746
+34,55,1203,496,1754
+35,60,1173,504,1737
+36,68,1211,512,1791
+37,72,1312,520,1904
+38,80,1405,567,2052
+39,52,1146,493,1691
+40,60,1205,502,1767
