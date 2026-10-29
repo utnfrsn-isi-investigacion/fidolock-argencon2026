@@ -1,5 +1,7 @@
 # FidoLock: ARGENCON 2026 artifact
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23752487.svg)](https://doi.org/10.5281/zenodo.23752487)
+
 This repository holds the firmware, host tools, hardware schematic and assembly guide for the paper:
 
 > A. P. Recalde, L. P. Torcello, E. E. Paez and D. P. Arce, "FidoLock: FIDO2/CTAP2-Based Physical Access Control with Hardware Security Keys on an Embedded Platform," in *Proc. IEEE ARGENCON 2026*.
@@ -87,7 +89,7 @@ Copyright 2026 Alejandro Pedro Recalde, Leandro Pablo Torcello, Enzo Ezequiel Pa
 
 ## Citation
 
-If you use this artifact, please cite the paper. The citation metadata is in [CITATION.cff](CITATION.cff).
+If you use this artifact, please cite the paper. The citation metadata is in [CITATION.cff](CITATION.cff). This snapshot is archived on Zenodo as [doi:10.5281/zenodo.23752487](https://doi.org/10.5281/zenodo.23752487).
 
 ```bibtex
 @inproceedings{recalde2026fidolock,
