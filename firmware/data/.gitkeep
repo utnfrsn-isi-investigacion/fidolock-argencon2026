@@ -1,0 +1,4 @@
+# This directory is intentionally kept empty.
+# PlatformIO's `uploadfs` target reads from here to build the LittleFS image.
+# Place any files you want pre-loaded into the filesystem here before running:
+#   pio run --target uploadfs

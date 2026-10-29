@@ -1,0 +1,250 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid e63e39d7-6ac0-4ffd-8aa3-1841a4541b55)
+
+  (paper "A3")
+
+  (title_block
+    (title "FidoLock - Physical Access Control System")
+    (date "2024-01-15")
+    (rev "0.1")
+    (company "UTN FRSN - Research Project")
+    (comment 1 "ESP32 + FIDO2 Authentication via YubiKey")
+    (comment 2 "https://github.com/utnfrsn-isi-investigacion/fidolock-argencon2026")
+  )
+
+  (lib_symbols
+    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (at 2.032 0 90) (effects (font (size 1.27 1.27))))
+      (property "Value" "R" (at 0 0 90) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at -1.778 0 90) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle (start -1.016 -2.54) (end 1.016 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "R_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 0 -3.81 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "Device:LED" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "LED" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "LED_0_1"
+        (polyline (pts (xy -1.27 -1.27) (xy -1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+        (polyline (pts (xy -1.27 0) (xy 1.27 0)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+        (polyline (pts (xy -3.048 -1.27) (xy -4.572 -2.794)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy -1.778 -1.27) (xy -3.302 -2.794)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy -3.048 -1.27) (xy -3.556 -1.778) (xy -3.048 -2.286) (xy -3.048 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy -1.778 -1.27) (xy -2.286 -1.778) (xy -1.778 -2.286) (xy -1.778 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "LED_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54) (name "K" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 3.81 0 180) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "Transistor_BJT:2N2222" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "Q" (at 5.08 1.905 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "2N2222" (at 5.08 0 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 5.08 -1.905 0) (effects (font (size 1.27 1.27) italic) (justify left) hide))
+      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/P2N2222A-D.PDF" (at 0 0 0) (effects (font (size 1.27 1.27)) (justify left) hide))
+      (symbol "2N2222_0_1"
+        (polyline (pts (xy 0.635 0.635) (xy 2.54 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)) (stroke (width 0.508) (type default)) (fill (type none)))
+        (polyline (pts (xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)) (stroke (width 0) (type default)) (fill (type outline)))
+        (circle (center 1.27 0) (radius 2.8194) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "2N2222_1_1"
+        (pin input line (at -2.54 0 0) (length 3.175) (name "B" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 2.54 -5.08 90) (length 2.54) (name "E" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 2.54 5.08 270) (length 2.54) (name "C" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "Device:Buzzer" (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "BZ" (at 4.445 0.635 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Buzzer" (at 4.445 -1.27 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at -0.635 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at -0.635 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "Buzzer_0_1"
+        (arc (start -0.254 -1.27) (mid -1.2824 0) (end -0.254 1.27) (stroke (width 0.254) (type default)) (fill (type none)))
+        (arc (start 0.635 -1.27) (mid -0.3926 0) (end 0.635 1.27) (stroke (width 0.254) (type default)) (fill (type none)))
+        (rectangle (start 3.81 1.27) (end 0.635 -1.27) (stroke (width 0.254) (type default)) (fill (type none)))
+        (circle (center 2.222 0) (radius 1.27) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "Buzzer_1_1"
+        (pin passive line (at 0 2.54 270) (length 1.27) (name "+" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 0 -2.54 90) (length 1.27) (name "-" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "Relay:G5V-1" (in_bom yes) (on_board yes)
+      (property "Reference" "K" (at 8.89 6.35 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Relay_SPDT" (at 8.89 3.81 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "G5V-1_0_0"
+        (rectangle (start -7.62 6.35) (end 7.62 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))
+        (text "COIL" (at -3.81 -3.81 0) (effects (font (size 1.27 1.27))))
+        (text "NO" (at 3.175 5.08 0) (effects (font (size 1.27 1.27))))
+        (text "NC" (at 3.175 -5.08 0) (effects (font (size 1.27 1.27))))
+        (text "COM" (at 3.175 0 0) (effects (font (size 1.27 1.27))))
+      )
+      (symbol "G5V-1_1_1"
+        (rectangle (start -5.08 -1.27) (end -2.54 -2.54) (stroke (width 0) (type default)) (fill (type outline)))
+        (polyline (pts (xy -5.08 1.27) (xy -3.81 1.27) (xy -3.81 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy -2.54 1.27) (xy -3.81 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+        (pin passive line (at -5.08 3.81 270) (length 2.54) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at -2.54 3.81 270) (length 2.54) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 5.08 7.62 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 5.08 0 180) (length 2.54) (name "~" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 5.08 -7.62 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "Switch:SW_Push" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "SW" (at 1.27 6.35 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "SW_Push" (at 0 -1.524 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 5.08 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 5.08 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "SW_Push_0_1"
+        (circle (center -2.032 0) (radius 0.508) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 1.27) (xy 0 3.048)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 2.54 1.27) (xy -2.54 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+        (circle (center 2.032 0) (radius 0.508) (stroke (width 0) (type default)) (fill (type none)))
+        (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "Device:D" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "D" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_0_1"
+        (polyline (pts (xy -1.27 1.27) (xy -1.27 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+        (polyline (pts (xy 1.27 0) (xy -1.27 0)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "D_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54) (name "K" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 3.81 0 180) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -6.35 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND" (at 0 -3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline (pts (xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "GND_1_1"
+        (pin power_in line (at 0 0 270) (length 0) (name "GND" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+3.3V" (at 0 3.556 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "+3.3V_0_1"
+        (polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "+3.3V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) (name "+3.3V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+5V" (at 0 3.556 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "+5V_0_1"
+        (polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "+5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) (name "+5V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      )
+    )
+    (symbol "power:+12V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+12V" (at 0 3.556 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "+12V_0_1"
+        (polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "+12V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) (name "+12V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      )
+    )
+  )
+
+  ; ============================================
+  ; TEXT ANNOTATIONS
+  ; ============================================
+
+  (text "ESP32 GPIO Connections:\n- GPIO18: SPI SCK (PN532)\n- GPIO19: SPI MISO (PN532)\n- GPIO23: SPI MOSI (PN532)\n- GPIO5: SPI SS (PN532)\n- GPIO4: IRQ (PN532)\n- GPIO26: Relay Control\n- GPIO27: Green LED\n- GPIO14: Red LED\n- GPIO32: Buzzer\n- GPIO33: Tamper Switch"
+    (at 20.32 -120.65 0)
+    (effects (font (size 2.54 2.54)) (justify left))
+  )
+
+  (text "POWER SECTION"
+    (at 20.32 -30.48 0)
+    (effects (font (size 3.81 3.81) bold) (justify left))
+  )
+
+  (text "NFC READER (PN532) - SPI MODE"
+    (at 120.65 -30.48 0)
+    (effects (font (size 3.81 3.81) bold) (justify left))
+  )
+
+  (text "RELAY & LOCK CONTROL"
+    (at 220.98 -30.48 0)
+    (effects (font (size 3.81 3.81) bold) (justify left))
+  )
+
+  (text "LED INDICATORS"
+    (at 20.32 -160.02 0)
+    (effects (font (size 3.81 3.81) bold) (justify left))
+  )
+
+  (text "BUZZER DRIVER"
+    (at 120.65 -160.02 0)
+    (effects (font (size 3.81 3.81) bold) (justify left))
+  )
+
+  (text "TAMPER DETECTION"
+    (at 220.98 -160.02 0)
+    (effects (font (size 3.81 3.81) bold) (justify left))
+  )
+
+  (text "Notes:\n1. PN532 must be set to SPI mode (DIP: SW1=OFF, SW2=ON)\n2. 2N2222A transistors in TO-92 package (E-B-C pinout)\n3. 1N4007 flyback diode protects against relay coil back-EMF\n4. All LEDs are 5mm standard, forward voltage ~2V\n5. Buzzer is active type, 5V\n6. Tamper switch is Normally Closed (NC)"
+    (at 20.32 -240 0)
+    (effects (font (size 2.54 2.54)) (justify left))
+  )
+
+  ; ============================================
+  ; COMPONENT INSTANCES (Hierarchical Labels)
+  ; ============================================
+
+  (hierarchical_label "GPIO18_SCK" (shape input) (at 100.33 -50.8 180) (effects (font (size 1.27 1.27)) (justify right)))
+  (hierarchical_label "GPIO19_MISO" (shape output) (at 100.33 -55.88 180) (effects (font (size 1.27 1.27)) (justify right)))
+  (hierarchical_label "GPIO23_MOSI" (shape input) (at 100.33 -60.96 180) (effects (font (size 1.27 1.27)) (justify right)))
+  (hierarchical_label "GPIO5_SS" (shape input) (at 100.33 -66.04 180) (effects (font (size 1.27 1.27)) (justify right)))
+  (hierarchical_label "GPIO4_IRQ" (shape output) (at 100.33 -71.12 180) (effects (font (size 1.27 1.27)) (justify right)))
+  (hierarchical_label "GPIO26_RELAY" (shape input) (at 200.66 -50.8 180) (effects (font (size 1.27 1.27)) (justify right)))
+  (hierarchical_label "GPIO27_LED_G" (shape input) (at 50.8 -180.34 0) (effects (font (size 1.27 1.27)) (justify left)))
+  (hierarchical_label "GPIO14_LED_R" (shape input) (at 50.8 -210.82 0) (effects (font (size 1.27 1.27)) (justify left)))
+  (hierarchical_label "GPIO32_BUZZER" (shape input) (at 140.97 -180.34 0) (effects (font (size 1.27 1.27)) (justify left)))
+  (hierarchical_label "GPIO33_TAMPER" (shape output) (at 231.14 -180.34 0) (effects (font (size 1.27 1.27)) (justify left)))
+
+)
